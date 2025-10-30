@@ -1,0 +1,33 @@
+# Build artifacts
+*.o
+*.so
+*.a
+*.la
+*.lo
+build/
+*.cmake
+CMakeFiles/
+CMakeCache.txt
+Makefile
+*.autosave
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+/tmp/
+
+# Package files (not the source package directory)
+*.tar.gz
+*.zip
+*.deb
+*.rpm
+
+# Log files
+*.log
