@@ -1,23 +1,25 @@
 #!/bin/bash
-# Installation script for Platform Profile Applet
+# Installation script for Platform Profile Applet (Plasma 6)
 
 set -e
 
 APPLET_NAME="org.kde.plasma.platformprofile"
 PACKAGE_DIR="package"
 
-echo "Installing Platform Profile Applet..."
+echo "Installing Platform Profile Applet for Plasma 6..."
 
-# Check if kpackagetool5 or kpackagetool6 is available
+# Check if kpackagetool6 is available (Plasma 6 required)
 if command -v kpackagetool6 &> /dev/null; then
     KPACKAGETOOL="kpackagetool6"
     echo "Using kpackagetool6 (Plasma 6)"
 elif command -v kpackagetool5 &> /dev/null; then
-    KPACKAGETOOL="kpackagetool5"
-    echo "Using kpackagetool5 (Plasma 5)"
+    echo "Warning: This applet requires Plasma 6."
+    echo "Plasma 5 detected (kpackagetool5 found)."
+    echo "Please upgrade to Plasma 6 or use an older version of this applet."
+    exit 1
 else
-    echo "Error: kpackagetool5 or kpackagetool6 not found."
-    echo "Please install KDE development tools:"
+    echo "Error: kpackagetool6 not found."
+    echo "Please install KDE Plasma 6 development tools:"
     echo "  - Debian/Ubuntu: sudo apt install plasma-sdk"
     echo "  - Fedora: sudo dnf install plasma-sdk"
     echo "  - Arch: sudo pacman -S plasma-sdk"

@@ -37,10 +37,12 @@ Platform profiles control the performance and power behavior of your system thro
 - `/sys/firmware/acpi/platform_profile_choices` file must exist
 
 ### Software Requirements
-- KDE Plasma 5.x or 6.x
-- Qt 5.15+ or Qt 6.x
+- KDE Plasma 6.x (primary support)
+- Qt 6.x
 - `pkexec` (for changing profiles with root privileges)
-- `kpackagetool5` or `kpackagetool6` (for installation)
+- `kpackagetool6` (for installation)
+
+**Note**: This version is designed for Plasma 6. For Plasma 5 support, please use an older release.
 
 ### Check System Compatibility
 

@@ -1,8 +1,8 @@
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.kirigami as Kirigami
 
 Item {
     id: compactRoot
@@ -43,7 +43,7 @@ Item {
         anchors.fill: parent
         hoverEnabled: true
         onClicked: {
-            plasmoid.expanded = !plasmoid.expanded
+            root.expanded = !root.expanded
         }
 
         // Icon display
@@ -65,7 +65,7 @@ Item {
                 border.width: 1
                 visible: root.currentProfile !== ""
 
-                PlasmaComponents3.Label {
+                PlasmaComponents.Label {
                     anchors.centerIn: parent
                     text: getProfileShortText()
                     font.pixelSize: parent.height * 0.6
@@ -75,7 +75,7 @@ Item {
         }
 
         // Loading indicator
-        PlasmaComponents3.BusyIndicator {
+        PlasmaComponents.BusyIndicator {
             anchors.centerIn: parent
             running: root.currentProfile === ""
             visible: running

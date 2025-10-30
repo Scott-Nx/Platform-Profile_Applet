@@ -1,4 +1,5 @@
 {
+    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -12,10 +13,9 @@
         "Id": "org.kde.plasma.platformprofile",
         "License": "GPL-3.0+",
         "Name": "Platform Profile",
-        "Version": "1.0",
+        "Version": "1.1",
         "Website": "https://github.com/Scott-Nx/Platform-Profile_Applet"
     },
-    "KPackageStructure": "Plasma/Applet",
-    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-MainScript": "ui/main.qml"
 }
