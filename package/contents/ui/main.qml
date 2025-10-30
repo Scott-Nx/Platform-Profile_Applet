@@ -1,12 +1,11 @@
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasma5support as Plasma5Support
+import org.kde.kirigami as Kirigami
 
-Item {
+PlasmoidItem {
     id: root
 
     // Property to hold current platform profile
@@ -19,11 +18,11 @@ Item {
     readonly property string profilePath: "/sys/firmware/acpi/platform_profile"
     readonly property string choicesPath: "/sys/firmware/acpi/platform_profile_choices"
 
-    Plasmoid.compactRepresentation: CompactRepresentation {}
-    Plasmoid.fullRepresentation: FullRepresentation {}
+    compactRepresentation: CompactRepresentation {}
+    fullRepresentation: FullRepresentation {}
 
     // DataSource to execute shell commands
-    PlasmaCore.DataSource {
+    Plasma5Support.DataSource {
         id: executeSource
         engine: "executable"
         connectedSources: []
@@ -137,7 +136,7 @@ Item {
         readAvailableProfiles()
     }
 
-    // Tooltip text
-    Plasmoid.toolTipMainText: "Platform Profile"
-    Plasmoid.toolTipSubText: currentProfile ? "Current: " + currentProfile : "Loading..."
+    // Tooltip text for Plasma 6
+    toolTipMainText: "Platform Profile"
+    toolTipSubText: currentProfile ? "Current: " + currentProfile : "Loading..."
 }
