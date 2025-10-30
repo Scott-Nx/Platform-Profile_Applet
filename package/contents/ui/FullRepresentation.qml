@@ -63,9 +63,8 @@ ColumnLayout {
         }
 
         // Separator
-        PlasmaComponents.ToolSeparator {
+        Kirigami.Separator {
             Layout.fillWidth: true
-            orientation: Qt.Horizontal
         }
 
         // Available profiles list
