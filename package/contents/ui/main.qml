@@ -37,15 +37,37 @@ Item {
             
             if (sourceName.indexOf("cat " + profilePath) !== -1) {
                 if (exitCode === 0 && stdout) {
-                    root.currentProfile = stdout.trim()
-                    root.hasError = false
+                    var profile = stdout.trim()
+                    // Validate profile name contains only safe characters
+                    if (profile.match(/^[a-zA-Z0-9\-]+$/)) {
+                        root.currentProfile = profile
+                        root.hasError = false
+                    } else {
+                        console.error("Invalid profile name format:", profile)
+                        root.hasError = true
+                        root.errorMessage = "Invalid profile name format"
+                    }
                 } else {
                     root.hasError = true
                     root.errorMessage = "Cannot read platform profile"
                 }
             } else if (sourceName.indexOf("cat " + choicesPath) !== -1) {
                 if (exitCode === 0 && stdout) {
-                    root.availableProfiles = stdout.trim().split(/\s+/)
+                    // Parse and validate profile names
+                    var profiles = stdout.trim().split(/\s+/)
+                    var validProfiles = []
+                    
+                    // Only accept alphanumeric characters and hyphens
+                    for (var i = 0; i < profiles.length; i++) {
+                        var profile = profiles[i]
+                        if (profile.match(/^[a-zA-Z0-9\-]+$/)) {
+                            validProfiles.push(profile)
+                        } else {
+                            console.warn("Ignoring invalid profile name:", profile)
+                        }
+                    }
+                    
+                    root.availableProfiles = validProfiles
                     root.hasError = false
                 } else {
                     root.hasError = true
@@ -75,7 +97,15 @@ Item {
     // Function to set profile (requires root privileges)
     function setProfile(profile) {
         console.log("Attempting to set profile to:", profile)
+        
+        // Validate profile name against available profiles to prevent injection
+        if (availableProfiles.indexOf(profile) === -1) {
+            console.error("Invalid profile name:", profile)
+            return
+        }
+        
         // Using pkexec to get root privileges
+        // Profile is validated against availableProfiles, preventing injection
         executeSource.exec("pkexec sh -c 'echo " + profile + " > " + profilePath + "'")
         // Re-read after a short delay to confirm change
         reloadTimer.restart()
