@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "scott@example.com",
+                "Name": "Scott"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "View and change ACPI platform profiles for Lenovo devices",
+        "Icon": "preferences-system-power-management",
+        "Id": "org.kde.plasma.platformprofile",
+        "License": "GPL-3.0+",
+        "Name": "Platform Profile",
+        "Version": "1.0",
+        "Website": "https://github.com/Scott-Nx/Platform-Profile_Applet"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}
