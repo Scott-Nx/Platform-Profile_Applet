@@ -67,7 +67,7 @@ ColumnLayout {
             Layout.fillWidth: true
         }
 
-        // Available profiles list
+        // Available profiles display (read-only)
         PlasmaComponents.Label {
             Layout.fillWidth: true
             text: "Available Profiles:"
@@ -75,34 +75,38 @@ ColumnLayout {
             visible: root.availableProfiles.length > 0
         }
 
-        // Profile buttons
+        // Profile list (display only, no buttons)
         Repeater {
             model: root.availableProfiles
             
-            PlasmaComponents.Button {
+            RowLayout {
                 Layout.fillWidth: true
+                spacing: Kirigami.Units.smallSpacing
                 
                 property string profileName: modelData
                 
-                text: {
-                    var name = profileName
-                    if (profileName === root.currentProfile) {
-                        name += " ✓"
+                Kirigami.Icon {
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                    source: {
+                        if (profileName === "performance") return "speedometer"
+                        if (profileName === "balanced") return "dialog-ok"
+                        if (profileName === "low-power" || profileName === "quiet") return "battery-profile-powersave"
+                        return "system-run"
                     }
-                    return name.charAt(0).toUpperCase() + name.slice(1)
                 }
                 
-                icon.name: {
-                    if (profileName === "performance") return "speedometer"
-                    if (profileName === "balanced") return "dialog-ok"
-                    if (profileName === "low-power" || profileName === "quiet") return "battery-profile-powersave"
-                    return "system-run"
-                }
-                
-                highlighted: profileName === root.currentProfile
-                
-                onClicked: {
-                    root.setProfile(profileName)
+                PlasmaComponents.Label {
+                    Layout.fillWidth: true
+                    text: {
+                        var name = profileName.charAt(0).toUpperCase() + profileName.slice(1)
+                        if (profileName === root.currentProfile) {
+                            name += " ✓ (Active)"
+                        }
+                        return name
+                    }
+                    font.weight: profileName === root.currentProfile ? Font.Bold : Font.Normal
+                    color: profileName === root.currentProfile ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
                 }
             }
         }
@@ -136,7 +140,7 @@ ColumnLayout {
     // Footer with help text
     PlasmaComponents.Label {
         Layout.fillWidth: true
-        text: "Tip: Use Fn+Q to toggle profiles on Lenovo devices"
+        text: "Use Fn+Q to change profiles on Lenovo devices"
         font.pointSize: Kirigami.Theme.smallFont.pointSize
         opacity: 0.6
         wrapMode: Text.WordWrap
