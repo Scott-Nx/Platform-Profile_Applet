@@ -18,6 +18,13 @@ PlasmoidItem {
     compactRepresentation: CompactRepresentation {}
     fullRepresentation: FullRepresentation {}
 
+    // Refresh profile when UI is expanded
+    onExpandedChanged: {
+        if (expanded) {
+            readCurrentProfile()
+        }
+    }
+
     // DataSource to execute shell commands
     Plasma5Support.DataSource {
         id: executeSource
@@ -111,11 +118,11 @@ PlasmoidItem {
         }
     }
 
-    // Timer for periodic updates
+    // Timer for periodic updates (only when UI is expanded)
     Timer {
         id: updateTimer
         interval: 5000
-        running: true
+        running: root.expanded
         repeat: true
         onTriggered: {
             readCurrentProfile()
