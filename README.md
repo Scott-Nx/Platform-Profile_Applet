@@ -8,6 +8,7 @@ A KDE Plasma Widget (Applet) for viewing and changing ACPI platform profiles on 
 ## Overview
 
 This Plasma applet provides an easy way to:
+
 - **View** the current platform profile at a glance
 - **Switch** between available platform profiles with a single click
 - **Monitor** profile changes made via Fn+Q keyboard shortcut (on supported devices)
@@ -32,11 +33,13 @@ Platform profiles control the performance and power behavior of your system thro
 ## Requirements
 
 ### System Requirements
+
 - Linux system with ACPI platform profile support
 - `/sys/firmware/acpi/platform_profile` file must exist
 - `/sys/firmware/acpi/platform_profile_choices` file must exist
 
 ### Software Requirements
+
 - KDE Plasma 6.x (primary support)
 - Qt 6.x
 - `pkexec` (for changing profiles with root privileges)
@@ -64,12 +67,14 @@ cat /sys/firmware/acpi/platform_profile_choices
 ### Automatic Installation
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/Scott-Nx/Platform-Profile_Applet.git
    cd Platform-Profile_Applet
    ```
 
 2. Run the installation script:
+
    ```bash
    ./install.sh
    ```
@@ -126,6 +131,7 @@ kpackagetool5 -t Plasma/Applet -r org.kde.plasma.platformprofile
 ### Popup Interface
 
 Click the panel icon to open the popup interface, which shows:
+
 - Current profile name (color-coded)
 - Buttons for all available profiles
 - Active profile marked with a checkmark (✓)
@@ -144,6 +150,7 @@ Click the panel icon to open the popup interface, which shows:
 **Cause**: The system doesn't support ACPI platform profiles or files are not accessible.
 
 **Solutions**:
+
 - Verify files exist: `ls -l /sys/firmware/acpi/platform_profile*`
 - Check your hardware supports this feature (common on Lenovo laptops)
 - Ensure ACPI is enabled in BIOS/UEFI
@@ -153,6 +160,7 @@ Click the panel icon to open the popup interface, which shows:
 **Cause**: Missing or misconfigured pkexec.
 
 **Solutions**:
+
 - Install PolicyKit:
   - Debian/Ubuntu: `sudo apt install policykit-1`
   - Fedora: `sudo dnf install polkit`
@@ -163,6 +171,7 @@ Click the panel icon to open the popup interface, which shows:
 **Cause**: Installation failed or Plasma needs restart.
 
 **Solutions**:
+
 - Restart Plasma: `plasmashell --replace &`
 - Or log out and log back in
 - Verify installation: `kpackagetool5 -t Plasma/Applet -s org.kde.plasma.platformprofile`
@@ -172,6 +181,7 @@ Click the panel icon to open the popup interface, which shows:
 **Cause**: Delayed update or permission issues.
 
 **Solutions**:
+
 - Wait a few seconds (updates every 5 seconds)
 - Check manually: `cat /sys/firmware/acpi/platform_profile`
 - Verify file permissions on platform_profile files
@@ -180,7 +190,7 @@ Click the panel icon to open the popup interface, which shows:
 
 To test the applet without installing:
 
-```bash
+````bash
 plasmoidviewer -a package
 
 ### Debugging
@@ -190,7 +200,7 @@ Enable debug output:
 ```bash
 # View Plasma logs
 journalctl -f | grep plasma
-```
+````
 
 ## Supported Devices
 

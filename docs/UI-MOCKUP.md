@@ -58,16 +58,19 @@
 ## Interaction Flow
 
 1. **View Current State**
+
    ```
    Panel → [⚙️●P] ← Hover shows tooltip: "Platform Profile: Performance"
    ```
 
 2. **Open Popup**
+
    ```
    Click → Popup appears with current profile highlighted
    ```
 
 3. **Change Profile**
+
    ```
    Click "Balanced" → pkexec dialog appears
    Enter password → Profile changes
@@ -94,6 +97,7 @@
 ## Theme Integration
 
 The applet adapts to:
+
 - Light/dark theme (Breeze, Breeze Dark)
 - Custom color schemes
 - Icon themes

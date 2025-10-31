@@ -57,6 +57,7 @@ Feature requests are welcome! Please create an issue with:
 ### Code Style Guidelines
 
 #### QML Files
+
 - Use 4 spaces for indentation
 - Use camelCase for property and function names
 - Use PascalCase for component filenames
@@ -64,6 +65,7 @@ Feature requests are welcome! Please create an issue with:
 - Keep lines under 120 characters when possible
 
 #### Shell Scripts
+
 - Use bash for scripts
 - Add error handling (`set -e`)
 - Add comments for each major section
@@ -89,11 +91,13 @@ sudo pacman -S plasma-sdk qt5-declarative
 ### Testing Your Changes
 
 1. **Test with plasmoidviewer**:
+
    ```bash
    plasmoidviewer -a package
    ```
 
 2. **Install and test in real Plasma**:
+
    ```bash
    ./install.sh
    # Add to panel and test
@@ -120,6 +124,7 @@ We welcome contributions in these areas:
 ## Questions?
 
 If you have questions about contributing, feel free to:
+
 - Open an issue with the "question" label
 - Start a discussion on GitHub Discussions (if enabled)
 

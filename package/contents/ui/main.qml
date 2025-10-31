@@ -13,7 +13,7 @@ PlasmoidItem {
     property var availableProfiles: []
     property bool hasError: false
     property string errorMessage: ""
-    
+
     // Paths to system files
     readonly property string profilePath: "/sys/firmware/acpi/platform_profile"
     readonly property string choicesPath: "/sys/firmware/acpi/platform_profile_choices"
@@ -26,12 +26,12 @@ PlasmoidItem {
         id: executeSource
         engine: "executable"
         connectedSources: []
-        
+
         onNewData: {
             var stdout = data["stdout"]
             var stderr = data["stderr"]
             var exitCode = data["exit code"]
-            
+
             if (sourceName.indexOf("cat " + profilePath) !== -1 && sourceName.indexOf(choicesPath) === -1) {
                 if (exitCode === 0 && stdout) {
                     var profile = stdout.trim()
@@ -53,7 +53,7 @@ PlasmoidItem {
                     // Parse and validate profile names
                     var profiles = stdout.trim().split(/\s+/)
                     var validProfiles = []
-                    
+
                     // Only accept alphanumeric characters and hyphens
                     for (var i = 0; i < profiles.length; i++) {
                         var profile = profiles[i]
@@ -63,7 +63,7 @@ PlasmoidItem {
                             console.warn("Ignoring invalid profile name:", profile)
                         }
                     }
-                    
+
                     root.availableProfiles = validProfiles
                     root.hasError = false
                 } else {
@@ -71,10 +71,10 @@ PlasmoidItem {
                     root.errorMessage = "Cannot read profile choices"
                 }
             }
-            
+
             disconnectSource(sourceName)
         }
-        
+
         function exec(cmd) {
             connectSource(cmd)
         }
@@ -97,7 +97,7 @@ PlasmoidItem {
             console.error("Invalid profile name:", profile)
             return
         }
-        
+
         // Using pkexec to get root privileges
         // Profile is validated against availableProfiles, preventing injection
         executeSource.exec("pkexec sh -c 'echo " + profile + " > " + profilePath + "'")

@@ -72,7 +72,7 @@ quiet balanced performance
 Different manufacturers may use different profile names:
 
 - **Performance**: Maximum performance mode
-- **Balanced**: Balance between performance and efficiency  
+- **Balanced**: Balance between performance and efficiency
 - **Low-power**: Power saving mode
 - **Quiet**: Silent/quiet operation mode
 - **Cool**: Cooling priority mode

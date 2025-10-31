@@ -3,9 +3,11 @@
 ## Project: Platform Profile Applet for KDE Plasma
 
 ### Overview
+
 A complete KDE Plasma Widget implementation that allows users to view and change ACPI platform profiles on Lenovo devices and other compatible systems.
 
 ### Problem Statement Met
+
 [x] Query current platform profile from `/sys/firmware/acpi/platform_profile`
 [x] Display available profiles from `/sys/firmware/acpi/platform_profile_choices`
 [x] Allow users to change profiles with a graphical interface
@@ -68,6 +70,7 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 ### Technical Features
 
 #### Security
+
 - [x] Input validation using regex `^[a-zA-Z0-9\-]+$`
 - [x] Whitelist validation against available profiles
 - [x] Uses pkexec for proper privilege escalation
@@ -75,6 +78,7 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 - [x] Prevents command injection attacks
 
 #### Functionality
+
 - [x] Reads current profile on startup
 - [x] Lists all available profiles dynamically
 - [x] Color-codes profiles (red=performance, green=balanced, neutral=low-power)
@@ -84,6 +88,7 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 - [x] Keyboard accessible
 
 #### Compatibility
+
 - [x] Works with Plasma 6.x
 - [x] Uses Qt 5.15+ compatible QML
 - [x] Adapts to any profile names from the system
@@ -93,12 +98,14 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 ### Testing Approach
 
 #### Manual Testing
+
 - Validated JSON syntax
 - Checked QML file structure
 - Verified shell script functionality
 - Confirmed security validations
 
 #### Integration Testing
+
 - Installation script handles both Plasma versions
 - Proper directory structure for KDE package system
 - Metadata format matches KDE requirements
