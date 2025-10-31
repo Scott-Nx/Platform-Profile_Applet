@@ -56,21 +56,27 @@ PlasmoidItem {
                     var profiles = stdout.trim().split(/\s+/)
                     var validProfiles = []
                     
+                    console.log("Raw profiles from file:", stdout)
+                    console.log("Split profiles:", profiles.length)
+                    
                     // Only accept alphanumeric characters and hyphens
                     for (var i = 0; i < profiles.length; i++) {
                         var profile = profiles[i]
                         if (profile.match(/^[a-zA-Z0-9\-]+$/)) {
                             validProfiles.push(profile)
+                            console.log("Valid profile added:", profile)
                         } else {
                             console.warn("Ignoring invalid profile name:", profile)
                         }
                     }
                     
+                    console.log("Total valid profiles:", validProfiles.length)
                     root.availableProfiles = validProfiles
                     root.hasError = false
                 } else {
                     root.hasError = true
                     root.errorMessage = "Cannot read profile choices"
+                    console.error("Failed to read profile choices. Exit code:", exitCode)
                 }
             }
             

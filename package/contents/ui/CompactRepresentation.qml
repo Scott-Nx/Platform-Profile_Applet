@@ -52,26 +52,6 @@ Item {
             anchors.fill: parent
             source: getProfileIcon()
             active: mouseArea.containsMouse
-
-            // Badge with abbreviated profile name
-            Rectangle {
-                anchors.right: parent.right
-                anchors.bottom: parent.bottom
-                width: Kirigami.Units.iconSizes.small * 0.6
-                height: width
-                radius: width / 2
-                color: Kirigami.Theme.backgroundColor
-                border.color: Kirigami.Theme.textColor
-                border.width: 1
-                visible: root.currentProfile !== ""
-
-                PlasmaComponents.Label {
-                    anchors.centerIn: parent
-                    text: getProfileShortText()
-                    font.pixelSize: parent.height * 0.6
-                    font.bold: true
-                }
-            }
         }
 
         // Loading indicator

@@ -136,7 +136,7 @@ ColumnLayout {
     // Footer with help text
     PlasmaComponents.Label {
         Layout.fillWidth: true
-        text: "Tip: Use Fn+Q to toggle profiles on Lenovo devices"
+        text: "Use Fn+Q to change profiles on Lenovo devices"
         font.pointSize: Kirigami.Theme.smallFont.pointSize
         opacity: 0.6
         wrapMode: Text.WordWrap
