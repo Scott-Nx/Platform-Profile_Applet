@@ -13,7 +13,7 @@
     "Id": "org.kde.plasma.platformprofile",
     "License": "GPL-3.0+",
     "Name": "Platform Profile",
-    "Version": "1.2.1",
+    "Version": "1.2.1-lite",
     "Website": "https://github.com/Scott-Nx/Platform-Profile_Applet"
   },
   "X-Plasma-API-Minimum-Version": "6.0",
