@@ -34,7 +34,7 @@ PlasmoidItem {
             
             console.log("Command output:", sourceName, "stdout:", stdout, "stderr:", stderr, "exitCode:", exitCode)
             
-            if (sourceName.indexOf("cat " + profilePath) !== -1) {
+            if (sourceName.indexOf("cat " + profilePath) !== -1 && sourceName.indexOf(choicesPath) === -1) {
                 if (exitCode === 0 && stdout) {
                     var profile = stdout.trim()
                     // Validate profile name contains only safe characters
