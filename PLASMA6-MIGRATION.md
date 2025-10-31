@@ -184,10 +184,10 @@ If you have questions about the Plasma 6 migration:
 
 ## Version Comparison
 
-| Feature | v1.0 (Plasma 5) | v1.1 (Plasma 6) |
+| Feature | v1.0 (Plasma 5) | v1.2 (Plasma 6) |
 |---------|-----------------|-----------------|
-| Plasma 5 Support | ✅ Yes | ❌ No |
-| Plasma 6 Support | ⚠️ Limited | ✅ Full |
+| Plasma 5 | Yes | No |
+| Plasma 6 | No | Full |
 | Qt Version | 5.15+ | 6.x |
 | API Style | Legacy | Modern |
 | Maintenance | Ended | Active |
@@ -195,4 +195,4 @@ If you have questions about the Plasma 6 migration:
 ---
 
 Updated: 2025-10-30
-Version: 1.1
+Version: 1.2

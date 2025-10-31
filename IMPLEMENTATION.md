@@ -6,11 +6,11 @@
 A complete KDE Plasma Widget implementation that allows users to view and change ACPI platform profiles on Lenovo devices and other compatible systems.
 
 ### Problem Statement Met
-✅ Query current platform profile from `/sys/firmware/acpi/platform_profile`
-✅ Display available profiles from `/sys/firmware/acpi/platform_profile_choices`
-✅ Allow users to change profiles with a graphical interface
-✅ Make it easy to see current profile without manually running `cat` commands
-✅ Support Fn+Q toggle detection through automatic refresh
+[x] Query current platform profile from `/sys/firmware/acpi/platform_profile`
+[x] Display available profiles from `/sys/firmware/acpi/platform_profile_choices`
+[x] Allow users to change profiles with a graphical interface
+[x] Make it easy to see current profile without manually running `cat` commands
+[x] Support Fn+Q toggle detection through automatic refresh
 
 ### Implementation Details
 
@@ -69,27 +69,27 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 ### Technical Features
 
 #### Security
-- ✅ Input validation using regex `^[a-zA-Z0-9\-]+$`
-- ✅ Whitelist validation against available profiles
-- ✅ Uses pkexec for proper privilege escalation
-- ✅ No hardcoded credentials or sensitive data
-- ✅ Prevents command injection attacks
+- [x] Input validation using regex `^[a-zA-Z0-9\-]+$`
+- [x] Whitelist validation against available profiles
+- [x] Uses pkexec for proper privilege escalation
+- [x] No hardcoded credentials or sensitive data
+- [x] Prevents command injection attacks
 
 #### Functionality
-- ✅ Reads current profile on startup
-- ✅ Lists all available profiles dynamically
-- ✅ Color-codes profiles (red=performance, green=balanced, neutral=low-power)
-- ✅ Updates display when profile changes externally
-- ✅ Smooth UI transitions and feedback
-- ✅ Tooltip shows current profile without opening popup
-- ✅ Keyboard accessible
+- [x] Reads current profile on startup
+- [x] Lists all available profiles dynamically
+- [x] Color-codes profiles (red=performance, green=balanced, neutral=low-power)
+- [x] Updates display when profile changes externally
+- [x] Smooth UI transitions and feedback
+- [x] Tooltip shows current profile without opening popup
+- [x] Keyboard accessible
 
 #### Compatibility
-- ✅ Works with Plasma 5.x and 6.x
-- ✅ Uses Qt 5.15+ compatible QML
-- ✅ Adapts to any profile names from the system
-- ✅ Handles missing files gracefully
-- ✅ Theme-aware (light/dark modes)
+- [x] Works with Plasma 5.x and 6.x
+- [x] Uses Qt 5.15+ compatible QML
+- [x] Adapts to any profile names from the system
+- [x] Handles missing files gracefully
+- [x] Theme-aware (light/dark modes)
 
 ### Testing Approach
 
@@ -123,12 +123,12 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 
 ### Documentation Quality
 
-- ✅ Clear installation instructions
-- ✅ Troubleshooting guide
-- ✅ System compatibility checks
-- ✅ Testing procedures
-- ✅ Contributing guidelines
-- ✅ UI/UX documentation
+- [x] Clear installation instructions
+- [x] Troubleshooting guide
+- [x] System compatibility checks
+- [x] Testing procedures
+- [x] Contributing guidelines
+- [x] UI/UX documentation
 
 ### File Statistics
 
@@ -142,10 +142,10 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 
 The implementation fully satisfies the problem statement requirements:
 
-1. ✅ **View current profile**: Panel icon + tooltip + popup display
-2. ✅ **Change profile**: Click-to-select interface with authentication
-3. ✅ **List available profiles**: Dynamic loading from system
-4. ✅ **Lenovo Fn+Q support**: Auto-refresh detects external changes
-5. ✅ **User-friendly**: No manual command-line operations needed
+1. [x] **View current profile**: Panel icon + tooltip + popup display
+2. [x] **Change profile**: Click-to-select interface with authentication
+3. [x] **List available profiles**: Dynamic loading from system
+4. [x] **Lenovo Fn+Q support**: Auto-refresh detects external changes
+5. [x] **User-friendly**: No manual command-line operations needed
 
 The applet is production-ready with proper security measures, comprehensive documentation, and support for both Plasma 5 and 6.
