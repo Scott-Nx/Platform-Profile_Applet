@@ -91,11 +91,13 @@ PlasmoidItem {
 
     // Function to read current profile
     function readCurrentProfile() {
+        console.log("Reading current profile from:", profilePath)
         executeSource.exec("cat " + profilePath)
     }
 
     // Function to read available profiles
     function readAvailableProfiles() {
+        console.log("Reading available profiles from:", choicesPath)
         executeSource.exec("cat " + choicesPath)
     }
 
@@ -138,6 +140,9 @@ PlasmoidItem {
 
     // Initialize on startup
     Component.onCompleted: {
+        console.log("Platform Profile Applet initialized")
+        console.log("Profile path:", profilePath)
+        console.log("Choices path:", choicesPath)
         readCurrentProfile()
         readAvailableProfiles()
     }
