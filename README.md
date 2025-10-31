@@ -176,25 +176,6 @@ Click the panel icon to open the popup interface, which shows:
 - Check manually: `cat /sys/firmware/acpi/platform_profile`
 - Verify file permissions on platform_profile files
 
-## Development
-
-### Project Structure
-
-```
-Platform-Profile_Applet/
-├── package/
-│   ├── metadata.json              # Applet metadata
-│   └── contents/
-│       └── ui/
-│           ├── main.qml           # Main applet logic
-│           ├── CompactRepresentation.qml  # Panel icon
-│           └── FullRepresentation.qml     # Popup interface
-├── install.sh                     # Installation script
-├── uninstall.sh                   # Uninstallation script
-├── LICENSE                        # GPL-3.0 License
-└── README.md                      # This file
-```
-
 ### Testing
 
 To test the applet without installing:
