@@ -18,7 +18,7 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 
 1. **package/metadata.json**
    - Defines applet metadata (name, ID, version, category)
-   - Compatible with both Plasma 5 and Plasma 6
+   - Compatible with Plasma 6
    - Uses standard Plasma/Applet structure
 
 2. **package/contents/ui/main.qml** (143 lines)
@@ -84,7 +84,7 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 - [x] Keyboard accessible
 
 #### Compatibility
-- [x] Works with Plasma 5.x and 6.x
+- [x] Works with Plasma 6.x
 - [x] Uses Qt 5.15+ compatible QML
 - [x] Adapts to any profile names from the system
 - [x] Handles missing files gracefully
@@ -129,14 +129,6 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 - [x] Contributing guidelines
 - [x] UI/UX documentation
 
-### File Statistics
-
-- Total files created: 13
-- Total lines of code (QML): ~388 lines
-- Total lines of documentation: ~539 lines
-- Shell scripts: ~117 lines
-- JSON metadata: ~21 lines
-
 ### Conclusion
 
 The implementation fully satisfies the problem statement requirements:
@@ -147,4 +139,4 @@ The implementation fully satisfies the problem statement requirements:
 4. [x] **Lenovo Fn+Q support**: Auto-refresh detects external changes
 5. [x] **User-friendly**: No manual command-line operations needed
 
-The applet is production-ready with proper security measures, comprehensive documentation, and support for both Plasma 5 and 6.
+The applet is production-ready with proper security measures, comprehensive documentation, and support for and 6.

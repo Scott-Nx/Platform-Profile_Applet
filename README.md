@@ -200,12 +200,7 @@ Platform-Profile_Applet/
 To test the applet without installing:
 
 ```bash
-# For Plasma 6
 plasmoidviewer -a package
-
-# For Plasma 5
-plasmoidviewer -a package
-```
 
 ### Debugging
 
