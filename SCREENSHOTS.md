@@ -22,10 +22,12 @@ The icon is interactive - hovering shows a highlight effect, and clicking opens 
 When you click the panel icon, a popup appears with:
 
 ### Header Section
+
 - **Icon**: Power management icon
 - **Title**: "Platform Profile" (bold, large text)
 
 ### Current Profile Display
+
 - **Label**: "Current Profile:"
 - **Profile Name**: Large heading showing the active profile
 - **Color Coding**:
@@ -34,6 +36,7 @@ When you click the panel icon, a popup appears with:
   - Low-Power/Quiet: Neutral color (power saving)
 
 ### Profile Selection
+
 - **Section Title**: "Available Profiles:"
 - **Profile Buttons**: One button for each available profile
   - Each button shows:
@@ -44,6 +47,7 @@ When you click the panel icon, a popup appears with:
   - Click any button to switch to that profile
 
 ### Footer
+
 - **Tip**: "Use Fn+Q to change profiles on Lenovo devices"
   - Small, semi-transparent text
   - Provides helpful context for Lenovo laptop users
@@ -51,7 +55,9 @@ When you click the panel icon, a popup appears with:
 ## Error States
 
 ### Cannot Read Platform Profile
+
 Shows a placeholder with:
+
 - Error icon
 - Message: "Error accessing platform profile"
 - Explanation with troubleshooting steps:
@@ -60,7 +66,9 @@ Shows a placeholder with:
   - Confirm file existence in /sys/firmware/acpi/
 
 ### No Profiles Available
+
 Shows a placeholder with:
+
 - Information icon
 - Message: "Loading platform profiles..."
 - Appears during initial load
@@ -101,6 +109,7 @@ Shows a placeholder with:
 ## Theme Integration
 
 The applet fully respects the Plasma theme:
+
 - Uses theme colors for all UI elements
 - Adapts to light/dark themes automatically
 - Uses system font settings

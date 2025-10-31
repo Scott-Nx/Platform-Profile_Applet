@@ -38,6 +38,7 @@ Version 1.1 of the Platform Profile Applet has been updated to be fully compatib
 ### Metadata Changes
 
 Updated `metadata.json`:
+
 - Added `X-Plasma-API-Minimum-Version: "6.0"` to require Plasma 6
 - Removed `X-Plasma-API: "declarativeappletscript"` (deprecated)
 - Moved `KPackageStructure` to top of file (better practice)
@@ -46,11 +47,13 @@ Updated `metadata.json`:
 ### Installation Script Changes
 
 Updated `install.sh`:
+
 - Now requires `kpackagetool6`
 - Provides clear error message if Plasma 5 detected
 - Suggests upgrading to Plasma 6
 
 Updated `uninstall.sh`:
+
 - Now requires `kpackagetool6`
 - Simplified logic (Plasma 5 support removed)
 
@@ -122,6 +125,7 @@ qmake --version  # or qmake6 --version
 **Cause**: Plasma 6 development tools not installed
 
 **Solution**: Install plasma-sdk package for your distribution:
+
 ```bash
 # Debian/Ubuntu
 sudo apt install plasma-sdk
@@ -163,6 +167,7 @@ This ensures migration is smooth while encouraging use of newer APIs where avail
 ## Future Updates
 
 We will continue to improve the applet with:
+
 - Better integration with Plasma 6 features
 - Improved performance using Qt 6 capabilities
 - Enhanced UI using new Kirigami components
@@ -171,6 +176,7 @@ We will continue to improve the applet with:
 ## Questions?
 
 If you have questions about the Plasma 6 migration:
+
 1. Check this migration guide
 2. Review the updated README.md
 3. Check the issue tracker on GitHub
