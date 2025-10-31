@@ -59,12 +59,7 @@ A complete KDE Plasma Widget implementation that allows users to view and change
    - Detects and uses correct kpackagetool version
    - Clean removal with status messages
 
-7. **demo-setup.sh** (33 lines)
-   - Creates demo/test environment in /tmp
-   - Helps users test without hardware support
-   - Instructions for modifying applet to use demo files
-
-8. **Documentation**
+7. **Documentation**
    - **README.md** (242 lines): Comprehensive user documentation
    - **CONTRIBUTING.md** (113 lines): Contribution guidelines
    - **SCREENSHOTS.md** (111 lines): UI description and accessibility
