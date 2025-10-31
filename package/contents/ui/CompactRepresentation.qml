@@ -23,21 +23,6 @@ Item {
         }
     }
 
-    // Get abbreviated text for profile
-    function getProfileShortText() {
-        if (root.currentProfile === "performance") {
-            return "P"
-        } else if (root.currentProfile === "balanced") {
-            return "B"
-        } else if (root.currentProfile === "low-power") {
-            return "LP"
-        } else if (root.currentProfile === "quiet") {
-            return "Q"
-        } else {
-            return "?"
-        }
-    }
-
     MouseArea {
         id: mouseArea
         anchors.fill: parent
