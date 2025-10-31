@@ -9,7 +9,7 @@ ColumnLayout {
     id: fullRoot
 
     Layout.minimumWidth: Kirigami.Units.gridUnit * 15
-    Layout.minimumHeight: Kirigami.Units.gridUnit * 14
+    Layout.minimumHeight: Kirigami.Units.gridUnit * 15
     Layout.maximumWidth: Kirigami.Units.gridUnit * 20
     Layout.maximumHeight: Kirigami.Units.gridUnit * 20
 
