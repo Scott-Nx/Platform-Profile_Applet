@@ -1,6 +1,6 @@
 # Platform Profile Applet
 
-A KDE Plasma Widget (Applet) for viewing and changing ACPI platform profiles on Linux systems, particularly useful for Lenovo laptops with Fn+Q functionality.
+A KDE Plasma Widget (Applet) for monitoring ACPI platform profiles on Linux systems, particularly useful for Lenovo laptops with Fn+Q functionality.
 
 ![Platform Profile Applet](https://img.shields.io/badge/KDE-Plasma-blue)
 ![License](https://img.shields.io/badge/License-GPL--3.0-green)
@@ -9,8 +9,8 @@ A KDE Plasma Widget (Applet) for viewing and changing ACPI platform profiles on 
 
 This Plasma applet provides an easy way to:
 - **View** the current platform profile at a glance
-- **Switch** between available platform profiles with a single click
 - **Monitor** profile changes made via Fn+Q keyboard shortcut (on supported devices)
+- **Display** all available platform profiles
 
 ### What are Platform Profiles?
 
@@ -23,11 +23,10 @@ Platform profiles control the performance and power behavior of your system thro
 ## Features
 
 - 🎯 **Quick Access**: Panel icon shows current profile at a glance
-- 🔄 **Easy Switching**: Click to open popup and select desired profile
 - 🔍 **Visual Feedback**: Color-coded profiles and icons
 - ⌨️ **Fn+Q Compatible**: Automatically detects profile changes from keyboard shortcuts
-- 🔒 **Secure**: Uses pkexec for authenticated profile changes
 - 📊 **Real-time Updates**: Monitors profile changes every 5 seconds
+- 🖥️ **Read-only Display**: Shows available profiles without allowing changes (use Fn+Q to change profiles)
 
 ## Requirements
 
@@ -39,7 +38,6 @@ Platform profiles control the performance and power behavior of your system thro
 ### Software Requirements
 - KDE Plasma 6.x (primary support)
 - Qt 6.x
-- `pkexec` (for changing profiles with root privileges)
 - `kpackagetool6` (for installation)
 
 **Note**: This version is designed for Plasma 6. For Plasma 5 support, please use an older release.
@@ -137,15 +135,14 @@ The panel icon displays:
 
 Click the panel icon to open the popup interface, which shows:
 - Current profile name (color-coded)
-- Buttons for all available profiles
-- Active profile marked with a checkmark (✓)
+- List of all available profiles with icons
+- Active profile marked with "✓ (Active)"
 
 ### Changing Profiles
 
-1. Click the panel icon to open the popup
-2. Click on the desired profile button
-3. Authenticate with your password when prompted (pkexec)
-4. The profile will change and the interface updates automatically
+**Use the Fn+Q keyboard shortcut** on your Lenovo device to cycle through available profiles. The applet will automatically detect and display the change within 5 seconds.
+
+**Note**: This applet is read-only and monitors profile changes. It does not provide GUI buttons to change profiles. Use your device's hardware controls (Fn+Q) to switch profiles.
 
 ## Troubleshooting
 
@@ -158,16 +155,6 @@ Click the panel icon to open the popup interface, which shows:
 - Check your hardware supports this feature (common on Lenovo laptops)
 - Ensure ACPI is enabled in BIOS/UEFI
 
-### Cannot change profile / Authentication fails
-
-**Cause**: Missing or misconfigured pkexec.
-
-**Solutions**:
-- Install PolicyKit: 
-  - Debian/Ubuntu: `sudo apt install policykit-1`
-  - Fedora: `sudo dnf install polkit`
-  - Arch: `sudo pacman -S polkit`
-
 ### Applet doesn't appear in widget list
 
 **Cause**: Installation failed or Plasma needs restart.
@@ -175,7 +162,7 @@ Click the panel icon to open the popup interface, which shows:
 **Solutions**:
 - Restart Plasma: `plasmashell --replace &`
 - Or log out and log back in
-- Verify installation: `kpackagetool5 -t Plasma/Applet -s org.kde.plasma.platformprofile`
+- Verify installation: `kpackagetool6 -t Plasma/Applet -s org.kde.plasma.platformprofile`
 
 ### Profile changes not reflected
 

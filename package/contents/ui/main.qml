@@ -93,7 +93,10 @@ PlasmoidItem {
         executeSource.exec("cat " + choicesPath)
     }
 
-    // Function to set profile (requires root privileges)
+    // Note: Profile changing via GUI has been disabled.
+    // Users should use Fn+Q keyboard shortcut to change profiles.
+    // The setProfile function below is kept for reference but not used.
+    /*
     function setProfile(profile) {
         console.log("Attempting to set profile to:", profile)
         
@@ -109,6 +112,7 @@ PlasmoidItem {
         // Re-read after a short delay to confirm change
         reloadTimer.restart()
     }
+    */
 
     // Timer to reload profile after change
     Timer {
