@@ -144,7 +144,8 @@ PlasmoidItem {
         console.log("Profile path:", profilePath)
         console.log("Choices path:", choicesPath)
         readCurrentProfile()
-        readAvailableProfiles()
+        // Delay reading available profiles to avoid race condition with DataSource
+        Qt.callLater(readAvailableProfiles)
     }
 
     // Tooltip text for Plasma 6
