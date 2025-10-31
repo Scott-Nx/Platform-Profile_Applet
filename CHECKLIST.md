@@ -51,7 +51,6 @@
 - [x] Removes old versions before installing
 - [x] Provides clear instructions
 - [x] uninstall.sh script created
-- [x] demo-setup.sh for testing without hardware
 
 ## ✅ Documentation
 
