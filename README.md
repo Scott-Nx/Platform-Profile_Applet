@@ -123,16 +123,6 @@ kpackagetool5 -t Plasma/Applet -r org.kde.plasma.platformprofile
 
 ## Usage
 
-### Panel Icon
-
-The panel icon displays:
-- An icon representing the current profile
-- A badge with abbreviated profile name:
-  - **P**: Performance
-  - **B**: Balanced
-  - **LP**: Low-Power
-  - **Q**: Quiet
-
 ### Popup Interface
 
 Click the panel icon to open the popup interface, which shows:

@@ -2,10 +2,6 @@
 
 This document describes the user interface of the Platform Profile Applet.
 
-## Panel Icon (Compact Representation)
-
-The panel icon shows a power management icon with a badge indicating the current profile:
-
 ### Icon States
 
 - **Performance Mode**: Speedometer icon
