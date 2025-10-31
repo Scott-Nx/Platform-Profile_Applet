@@ -110,12 +110,12 @@ All items checked ✅ - The applet is ready for:
 
 ## 📊 Statistics
 
-- Total files: 14 (excluding LICENSE)
+- Total files: 16 (excluding LICENSE)
 - Lines of QML code: ~388
-- Lines of documentation: ~1,200+
+- Lines of documentation: ~1,700+
 - Lines of shell scripts: ~117
 - Installation methods: 2 (manual + script)
-- Supported Plasma versions: 2 (5.x and 6.x)
+- Supported Plasma versions: 6.x
 - Security vulnerabilities: 0
 - Test coverage: Manual verification complete
 
