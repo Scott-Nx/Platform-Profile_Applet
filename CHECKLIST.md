@@ -16,7 +16,6 @@
 
 - [x] Panel icon (compact representation) implemented
 - [x] Popup interface (full representation) implemented
-- [x] Profile badge on icon (P, B, LP, Q)
 - [x] Color-coded profiles in popup
 - [x] Icons for each profile type
 - [x] Checkmark on active profile

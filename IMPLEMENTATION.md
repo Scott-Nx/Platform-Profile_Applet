@@ -33,7 +33,6 @@ A complete KDE Plasma Widget implementation that allows users to view and change
 3. **package/contents/ui/CompactRepresentation.qml** (88 lines)
    - Panel icon display
    - Shows profile-appropriate icon (speedometer, checkmark, battery)
-   - Badge overlay with abbreviated profile name (P, B, LP, Q)
    - Hover effects and loading indicator
    - Click handler to open popup
 
