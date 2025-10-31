@@ -8,12 +8,12 @@ The panel icon shows a power management icon with a badge indicating the current
 
 ### Icon States
 
-- **Performance Mode**: Speedometer icon with "P" badge
-- **Balanced Mode**: Checkmark icon with "B" badge  
-- **Low-Power Mode**: Battery save icon with "LP" badge
-- **Quiet Mode**: Battery save icon with "Q" badge
+- **Performance Mode**: Speedometer icon
+- **Balanced Mode**: Checkmark icon
+- **Low-Power Mode**: Battery save icon
+- **Quiet Mode**: Battery save icon
 - **Loading**: Spinning busy indicator
-- **Unknown**: Generic power icon with "?" badge
+- **Unknown**: Generic power icon
 
 The icon is interactive - hovering shows a highlight effect, and clicking opens the full popup.
 
@@ -44,7 +44,7 @@ When you click the panel icon, a popup appears with:
   - Click any button to switch to that profile
 
 ### Footer
-- **Tip**: "Tip: Use Fn+Q to toggle profiles on Lenovo devices"
+- **Tip**: "Use Fn+Q to change profiles on Lenovo devices"
   - Small, semi-transparent text
   - Provides helpful context for Lenovo laptop users
 

@@ -32,9 +32,8 @@
 - [x] Validated against common security issues
 
 ## ✅ Compatibility
-- [x] Works with KDE Plasma 5
 - [x] Works with KDE Plasma 6
-- [x] Qt 5.15+ compatible
+- [x] Qt 6.x compatible
 - [x] Theme-aware (adapts to light/dark themes)
 - [x] Handles any profile names from system
 - [x] Graceful degradation on unsupported systems
