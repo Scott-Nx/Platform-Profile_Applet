@@ -22,12 +22,12 @@ Platform profiles control the performance and power behavior of your system thro
 
 ## Features
 
-- 🎯 **Quick Access**: Panel icon shows current profile at a glance
-- 🔄 **Easy Switching**: Click to open popup and select desired profile
-- 🔍 **Visual Feedback**: Color-coded profiles and icons
-- ⌨️ **Fn+Q Compatible**: Automatically detects profile changes from keyboard shortcuts
-- 🔒 **Secure**: Uses pkexec for authenticated profile changes
-- 📊 **Real-time Updates**: Monitors profile changes every 5 seconds
+- **Quick Access**: Panel icon shows current profile at a glance
+- **Easy Switching**: Click to open popup and select desired profile
+- **Visual Feedback**: Color-coded profiles and icons
+- **Fn+Q Compatible**: Automatically detects profile changes from keyboard shortcuts
+- **Secure**: Uses pkexec for authenticated profile changes
+- **Real-time Updates**: Monitors profile changes every 5 seconds
 
 ## Requirements
 
@@ -163,7 +163,7 @@ Click the panel icon to open the popup interface, which shows:
 **Cause**: Missing or misconfigured pkexec.
 
 **Solutions**:
-- Install PolicyKit: 
+- Install PolicyKit:
   - Debian/Ubuntu: `sudo apt install policykit-1`
   - Fedora: `sudo dnf install polkit`
   - Arch: `sudo pacman -S polkit`
@@ -231,6 +231,7 @@ journalctl -f | grep plasma
 This applet works on any Linux system that supports ACPI platform profiles. It's particularly useful for:
 
 - **Lenovo ThinkPad** laptops with Fn+Q
+- **Lenovo ThinkBook** laptops with Fn+Q
 - **Lenovo IdeaPad** laptops
 - Other laptops with ACPI platform profile support
 
@@ -253,25 +254,3 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 - KDE Plasma team for the excellent widget framework
 - Lenovo for implementing ACPI platform profile support
 - Linux kernel developers for ACPI subsystem
-
-## Support
-
-If you encounter issues:
-
-1. Check the [Troubleshooting](#troubleshooting) section
-2. Search existing [GitHub Issues](https://github.com/Scott-Nx/Platform-Profile_Applet/issues)
-3. Create a new issue with:
-   - Your system information (`uname -a`)
-   - Plasma version (`plasmashell --version`)
-   - Contents of `/sys/firmware/acpi/platform_profile*` files
-   - Any error messages from logs
-
-## Changelog
-
-### Version 1.0
-- Initial release
-- View current platform profile
-- Switch between available profiles
-- Panel icon with profile indicator
-- Auto-refresh every 5 seconds
-- Support for common profile types (performance, balanced, low-power, quiet)
