@@ -29,6 +29,9 @@ Item {
         onClicked: {
             root.expanded = !root.expanded
         }
+        onEntered: {
+            root.readCurrentProfile()
+        }
 
         // Icon display
         Kirigami.Icon {
