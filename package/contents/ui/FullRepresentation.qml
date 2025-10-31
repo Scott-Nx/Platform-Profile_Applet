@@ -7,9 +7,9 @@ import org.kde.kirigami as Kirigami
 
 ColumnLayout {
     id: fullRoot
-    
+
     Layout.minimumWidth: Kirigami.Units.gridUnit * 15
-    Layout.minimumHeight: Kirigami.Units.gridUnit * 12
+    Layout.minimumHeight: Kirigami.Units.gridUnit * 14
     Layout.maximumWidth: Kirigami.Units.gridUnit * 20
     Layout.maximumHeight: Kirigami.Units.gridUnit * 20
 
@@ -21,7 +21,7 @@ ColumnLayout {
 
         RowLayout {
             anchors.fill: parent
-            
+
             Kirigami.Icon {
                 Layout.preferredWidth: Kirigami.Units.iconSizes.medium
                 Layout.preferredHeight: Kirigami.Units.iconSizes.medium
@@ -78,12 +78,12 @@ ColumnLayout {
         // Profile buttons
         Repeater {
             model: root.availableProfiles
-            
+
             PlasmaComponents.Button {
                 Layout.fillWidth: true
-                
+
                 property string profileName: modelData
-                
+
                 text: {
                     var name = profileName
                     if (profileName === root.currentProfile) {
@@ -91,16 +91,16 @@ ColumnLayout {
                     }
                     return name.charAt(0).toUpperCase() + name.slice(1)
                 }
-                
+
                 icon.name: {
                     if (profileName === "performance") return "speedometer"
                     if (profileName === "balanced") return "dialog-ok"
                     if (profileName === "low-power" || profileName === "quiet") return "battery-profile-powersave"
                     return "system-run"
                 }
-                
+
                 highlighted: profileName === root.currentProfile
-                
+
                 onClicked: {
                     root.setProfile(profileName)
                 }
@@ -112,7 +112,7 @@ ColumnLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
             visible: root.hasError
-            
+
             iconName: "error"
             text: root.errorMessage || "Error accessing platform profile"
             explanation: "Make sure:\n• You have a compatible device\n• ACPI platform profile is supported\n• The files exist in /sys/firmware/acpi/"
@@ -123,7 +123,7 @@ ColumnLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
             visible: !root.hasError && root.availableProfiles.length === 0 && root.currentProfile === ""
-            
+
             iconName: "dialog-information"
             text: "Loading platform profiles..."
         }
