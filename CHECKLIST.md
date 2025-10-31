@@ -1,6 +1,7 @@
 # Pre-Release Checklist
 
 ## ✅ Core Functionality
+
 - [x] Reads current platform profile from `/sys/firmware/acpi/platform_profile`
 - [x] Reads available profiles from `/sys/firmware/acpi/platform_profile_choices`
 - [x] Displays current profile in panel icon
@@ -12,6 +13,7 @@
 - [x] Handles errors gracefully when files are unavailable
 
 ## ✅ User Interface
+
 - [x] Panel icon (compact representation) implemented
 - [x] Popup interface (full representation) implemented
 - [x] Profile badge on icon (P, B, LP, Q)
@@ -24,6 +26,7 @@
 - [x] Tooltip shows current profile
 
 ## ✅ Security
+
 - [x] Input validation with regex pattern
 - [x] Whitelist validation against available profiles
 - [x] No command injection vulnerabilities
@@ -32,6 +35,7 @@
 - [x] Validated against common security issues
 
 ## ✅ Compatibility
+
 - [x] Works with KDE Plasma 6
 - [x] Qt 6.x compatible
 - [x] Theme-aware (adapts to light/dark themes)
@@ -39,6 +43,7 @@
 - [x] Graceful degradation on unsupported systems
 
 ## ✅ Installation
+
 - [x] install.sh script created
 - [x] Detects correct Plasma version
 - [x] Checks for required tools
@@ -49,6 +54,7 @@
 - [x] demo-setup.sh for testing without hardware
 
 ## ✅ Documentation
+
 - [x] README.md with comprehensive guide
   - [x] Overview and features
   - [x] Requirements
@@ -66,6 +72,7 @@
 - [x] .gitignore for build artifacts
 
 ## ✅ Code Quality
+
 - [x] QML files follow consistent style
 - [x] Proper indentation (4 spaces)
 - [x] Clear variable and function names
@@ -76,6 +83,7 @@
 - [x] Shell scripts with error handling (set -e)
 
 ## ✅ Testing
+
 - [x] JSON metadata validated
 - [x] QML files have valid syntax
 - [x] Shell scripts are executable
@@ -84,6 +92,7 @@
 - [x] No CodeQL security issues (N/A for QML)
 
 ## ✅ Git & Version Control
+
 - [x] .gitignore configured
 - [x] All files committed
 - [x] Clear commit messages
@@ -93,6 +102,7 @@
 ## 📋 Pre-Installation User Checklist
 
 Users should verify before installing:
+
 - [ ] Running KDE Plasma 5 or 6
 - [ ] Have `/sys/firmware/acpi/platform_profile` file
 - [ ] Have `/sys/firmware/acpi/platform_profile_choices` file
@@ -103,6 +113,7 @@ Users should verify before installing:
 ## 🚀 Deployment Readiness
 
 All items checked ✅ - The applet is ready for:
+
 - Installation on end-user systems
 - Publishing to KDE Store
 - Distribution via package managers
