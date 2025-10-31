@@ -98,7 +98,7 @@ Shows a placeholder with:
 ## Dimensions
 
 - **Panel Icon**: Adapts to panel size (typically 16x16 to 32x32 pixels)
-- **Popup**: Minimum 15 grid units wide × 14 grid units tall
+- **Popup**: Minimum 15 grid units wide × 15 grid units tall
 - **Popup**: Maximum 20 grid units wide × 20 grid units tall
 - **Grid Unit**: Typically 18 pixels (adjusts with Plasma theme)
 
