@@ -92,8 +92,8 @@ ColumnLayout {
                 }
 
                 icon.name: {
-                    if (profileName === "performance") return "speedometer"
-                    if (profileName === "balanced") return "dialog-ok"
+                    if (profileName === "performance") return "battery-profile-performance"
+                    if (profileName === "balanced") return "battery-profile-balanced"
                     if (profileName === "low-power" || profileName === "quiet") return "battery-profile-powersave"
                     return "system-run"
                 }

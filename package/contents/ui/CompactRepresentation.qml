@@ -12,9 +12,9 @@ Item {
     // Get the icon for the current profile
     function getProfileIcon() {
         if (root.currentProfile === "performance") {
-            return "speedometer"
+            return "battery-profile-performance"
         } else if (root.currentProfile === "balanced") {
-            return "dialog-ok"
+            return "battery-profile-balanced"
         } else if (root.currentProfile === "low-power" || root.currentProfile === "quiet") {
             return "battery-profile-powersave"
         } else {
